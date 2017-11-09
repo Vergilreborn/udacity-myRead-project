@@ -26,12 +26,12 @@ body, .app {
   flex: 1;
 }
 
-.bookshelf {
+.bookshelf,.book-detail-content {
   padding: 0 10px 20px;
 }
 
 @media (min-width: 600px) {
-  .bookshelf {
+  .bookshelf,.book-detail-content {
     padding: 0 20px 40px;
   }
 }
@@ -140,20 +140,31 @@ body, .app {
   align-items: flex-end;
 }
 
-.book-shelf-changer {
+.book-shelf-detail,.book-shelf-changer  {
   position: absolute;
-  right: 0;
   bottom: -10px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background: #60ac5d;
-  background-image: url('./icons/arrow-drop-down.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
 }
+
+.book-shelf-changer {
+  right: 10px;
+  background-image: url('./icons/arrow-drop-down.svg');
+}
+
+.book-shelf-detail{
+  cursor: pointer;
+  left: 0;
+  background-image: url('./icons/detail.svg');  
+}
+
 .book-shelf-changer select {
   width: 100%;
   height: 100%;
@@ -171,4 +182,25 @@ body, .app {
   padding: 20px 10px 0;
   text-align: center;
   font-size: 0.8em;
+}
+
+.book-detail-field-title{
+  font-weight:bold;
+  text-decoration:underline;
+  font-size: 1.1em;
+}
+
+.book-detail-field-content{
+  padding: 0 10px;
+  text-indent: 25px;
+
+}
+
+.book-detail-field-inline{
+  display:inline;
+}
+
+.book-detail-header{
+  background: #2e7d32 !important;
+
 }
